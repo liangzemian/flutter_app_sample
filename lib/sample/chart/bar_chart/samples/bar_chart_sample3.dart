@@ -45,12 +45,12 @@ class BarChartSample3State extends State<BarChartSample3> {
               show: true,
               bottomTitles: SideTitles(
                 showTitles: true,
-                getTextStyles: (_) {
-                  return TextStyle(
-                      color: Color(0xff7589a2),
-                      fontWeight: FontWeight.bold,
-                      fontSize: 14);
-                },
+                // getTextStyles: (_) {
+                //   return TextStyle(
+                //       color: Color(0xff7589a2),
+                //       fontWeight: FontWeight.bold,
+                //       fontSize: 14);
+                // },
                 margin: 20,
                 getTitles: (double value) {
                   switch (value.toInt()) {

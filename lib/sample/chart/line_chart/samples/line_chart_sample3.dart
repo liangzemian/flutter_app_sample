@@ -212,21 +212,21 @@ class LineChartSample3 extends StatelessWidget {
 
                     return '';
                   },
-                  getTextStyles: (_) {
-                    return TextStyle(color: Colors.black, fontSize: 10);
-                  },
+                  // getTextStyles: (_) {
+                  //   return TextStyle(color: Colors.black, fontSize: 10);
+                  // },
                 ),
                 bottomTitles: SideTitles(
                   showTitles: true,
                   getTitles: (value) {
                     return weekDays[value.toInt()];
                   },
-                  getTextStyles: (_) {
-                    return TextStyle(
-                      color: Colors.deepOrange,
-                      fontWeight: FontWeight.bold,
-                    );
-                  },
+                  // getTextStyles: (_) {
+                  //   return TextStyle(
+                  //     color: Colors.deepOrange,
+                  //     fontWeight: FontWeight.bold,
+                  //   );
+                  // },
                 ),
               ),
             ),

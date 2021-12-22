@@ -39,7 +39,7 @@ class _TabMainPageState extends State<TabMainPage> {
               child: Padding(
                 padding: EdgeInsets.all(16),
                 child: AppTextHeadline6Widget.defaultStyle(
-                    "${list[index]['name']}"),
+                    data: "${list[index]['name']}",),
               ),
             );
           }),

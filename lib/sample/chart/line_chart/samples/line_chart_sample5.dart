@@ -84,14 +84,15 @@ class LineChartSample5 extends StatelessWidget {
                   }
                   return '';
                 },
-                getTextStyles: (_) {
-                  return TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.blueGrey,
-                    fontFamily: 'Digital',
-                    fontSize: 18,
-                  );
-                }),
+                // getTextStyles: (_) {
+                //   return TextStyle(
+                //     fontWeight: FontWeight.bold,
+                //     color: Colors.blueGrey,
+                //     fontFamily: 'Digital',
+                //     fontSize: 18,
+                //   );
+                // }
+                ),
           ),
           axisTitleData: FlAxisTitleData(
             rightTitle: AxisTitle(showTitle: true, titleText: 'count'),

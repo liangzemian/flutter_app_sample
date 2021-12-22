@@ -96,9 +96,9 @@ class LineChartSample1State extends State<LineChartSample1> {
         touchTooltipData: LineTouchTooltipData(
           tooltipBgColor: Colors.blueGrey.withOpacity(0.8),
         ),
-        touchCallback: (LineTouchResponse touchResponse) {
-          print(touchResponse);
-        },
+        // touchCallback: (LineTouchResponse touchResponse) {
+        //   print(touchResponse);
+        // },
         handleBuiltInTouches: true,
       ),
       gridData: FlGridData(
@@ -108,13 +108,13 @@ class LineChartSample1State extends State<LineChartSample1> {
         bottomTitles: SideTitles(
           showTitles: true,
           reservedSize: 22,
-          getTextStyles: (_) {
-            return TextStyle(
-              color: const Color(0xff72719b),
-              fontWeight: FontWeight.bold,
-              fontSize: 16,
-            );
-          },
+          // getTextStyles: (_) {
+          //   return TextStyle(
+          //     color: const Color(0xff72719b),
+          //     fontWeight: FontWeight.bold,
+          //     fontSize: 16,
+          //   );
+          // },
           margin: 10,
           getTitles: (value) {
             switch (value.toInt()) {
@@ -130,13 +130,13 @@ class LineChartSample1State extends State<LineChartSample1> {
         ),
         leftTitles: SideTitles(
           showTitles: true,
-          getTextStyles: (_) {
-            return TextStyle(
-              color: const Color(0xff75729e),
-              fontWeight: FontWeight.bold,
-              fontSize: 14,
-            );
-          },
+          // getTextStyles: (_) {
+          //   return TextStyle(
+          //     color: const Color(0xff75729e),
+          //     fontWeight: FontWeight.bold,
+          //     fontSize: 14,
+          //   );
+          // },
           getTitles: (value) {
             switch (value.toInt()) {
               case 1:
@@ -266,13 +266,13 @@ class LineChartSample1State extends State<LineChartSample1> {
         bottomTitles: SideTitles(
           showTitles: true,
           reservedSize: 22,
-          getTextStyles: (_) {
-            return TextStyle(
-              color: const Color(0xff72719b),
-              fontWeight: FontWeight.bold,
-              fontSize: 16,
-            );
-          },
+          // getTextStyles: (_) {
+          //   return TextStyle(
+          //     color: const Color(0xff72719b),
+          //     fontWeight: FontWeight.bold,
+          //     fontSize: 16,
+          //   );
+          // },
           margin: 10,
           getTitles: (value) {
             switch (value.toInt()) {
@@ -288,13 +288,13 @@ class LineChartSample1State extends State<LineChartSample1> {
         ),
         leftTitles: SideTitles(
           showTitles: true,
-          getTextStyles: (_) {
-            return TextStyle(
-              color: const Color(0xff75729e),
-              fontWeight: FontWeight.bold,
-              fontSize: 14,
-            );
-          },
+          // getTextStyles: (_) {
+          //   return TextStyle(
+          //     color: const Color(0xff75729e),
+          //     fontWeight: FontWeight.bold,
+          //     fontSize: 14,
+          //   );
+          // },
           getTitles: (value) {
             switch (value.toInt()) {
               case 1:

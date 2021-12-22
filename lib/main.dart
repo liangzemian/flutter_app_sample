@@ -88,7 +88,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ErrorWidget.builder = (detail) {
-      return AppTextHeadline6Widget.defaultStyle(detail.toString());
+      return AppTextHeadline6Widget.defaultStyle(data: detail.toString());
     };
     return MultiProvider(
       providers: [

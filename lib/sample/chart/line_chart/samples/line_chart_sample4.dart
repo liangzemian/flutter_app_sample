@@ -57,9 +57,9 @@ class LineChartSample4 extends StatelessWidget {
             bottomTitles: SideTitles(
                 showTitles: true,
                 reservedSize: 14,
-                getTextStyles: (_) {
-                  return dateTextStyle;
-                },
+                // getTextStyles: (_) {
+                //   return dateTextStyle;
+                // },
                 getTitles: (value) {
                   switch (value.toInt()) {
                     case 0:

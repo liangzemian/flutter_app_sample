@@ -58,152 +58,152 @@ class BarChartSample2State extends State<BarChartSample2> {
             mainAxisAlignment: MainAxisAlignment.start,
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
-                  makeTransactionsIcon(),
-                  SizedBox(
-                    width: 38,
-                  ),
-                  Text(
-                    'Transactions',
-                    style: TextStyle(color: Colors.white, fontSize: 22),
-                  ),
-                  SizedBox(
-                    width: 4,
-                  ),
-                  Text(
-                    'state',
-                    style: TextStyle(color: Color(0xff77839a), fontSize: 16),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 38,
-              ),
-              Expanded(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 8.0),
-                  child: BarChart(
-                    BarChartData(
-                      maxY: 20,
-                      barTouchData: BarTouchData(
-                          touchTooltipData: BarTouchTooltipData(
-                            tooltipBgColor: Colors.grey,
-                            getTooltipItem: (_a, _b, _c, _d) => null,
-                          ),
-                          touchCallback: (response) {
-                            if (response.spot == null) {
-                              setState(() {
-                                touchedGroupIndex = -1;
-                                showingBarGroups = List.of(rawBarGroups);
-                              });
-                              return;
-                            }
-
-                            touchedGroupIndex =
-                                response.spot.touchedBarGroupIndex;
-
-                            setState(() {
-                              if (response.touchInput is PointerExitEvent ||
-                                  response.touchInput is PointerUpEvent) {
-                                touchedGroupIndex = -1;
-                                showingBarGroups = List.of(rawBarGroups);
-                              } else {
-                                showingBarGroups = List.of(rawBarGroups);
-                                if (touchedGroupIndex != -1) {
-                                  double sum = 0;
-                                  for (BarChartRodData rod
-                                      in showingBarGroups[touchedGroupIndex]
-                                          .barRods) {
-                                    sum += rod.y;
-                                  }
-                                  final avg = sum /
-                                      showingBarGroups[touchedGroupIndex]
-                                          .barRods
-                                          .length;
-
-                                  showingBarGroups[touchedGroupIndex] =
-                                      showingBarGroups[touchedGroupIndex]
-                                          .copyWith(
-                                    barRods: showingBarGroups[touchedGroupIndex]
-                                        .barRods
-                                        .map((rod) {
-                                      return rod.copyWith(y: avg);
-                                    }).toList(),
-                                  );
-                                }
-                              }
-                            });
-                          }),
-                      titlesData: FlTitlesData(
-                        show: true,
-                        bottomTitles: SideTitles(
-                          showTitles: true,
-                          getTextStyles: (_) {
-                            return TextStyle(
-                                color: Color(0xff7589a2),
-                                fontWeight: FontWeight.bold,
-                                fontSize: 14);
-                          },
-                          margin: 20,
-                          getTitles: (double value) {
-                            switch (value.toInt()) {
-                              case 0:
-                                return 'Mn';
-                              case 1:
-                                return 'Te';
-                              case 2:
-                                return 'Wd';
-                              case 3:
-                                return 'Tu';
-                              case 4:
-                                return 'Fr';
-                              case 5:
-                                return 'St';
-                              case 6:
-                                return 'Sn';
-                              default:
-                                return '';
-                            }
-                          },
-                        ),
-                        leftTitles: SideTitles(
-                          showTitles: true,
-                          getTextStyles: (_) {
-                            return TextStyle(
-                                color: Color(0xff7589a2),
-                                fontWeight: FontWeight.bold,
-                                fontSize: 14);
-                          },
-                          margin: 32,
-                          reservedSize: 14,
-                          getTitles: (value) {
-                            if (value == 0) {
-                              return '1K';
-                            } else if (value == 10) {
-                              return '5K';
-                            } else if (value == 19) {
-                              return '10K';
-                            } else {
-                              return '';
-                            }
-                          },
-                        ),
-                      ),
-                      borderData: FlBorderData(
-                        show: false,
-                      ),
-                      barGroups: showingBarGroups,
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 12,
-              ),
+              // Row(
+              //   crossAxisAlignment: CrossAxisAlignment.center,
+              //   mainAxisSize: MainAxisSize.min,
+              //   mainAxisAlignment: MainAxisAlignment.start,
+              //   children: <Widget>[
+              //     makeTransactionsIcon(),
+              //     SizedBox(
+              //       width: 38,
+              //     ),
+              //     Text(
+              //       'Transactions',
+              //       style: TextStyle(color: Colors.white, fontSize: 22),
+              //     ),
+              //     SizedBox(
+              //       width: 4,
+              //     ),
+              //     Text(
+              //       'state',
+              //       style: TextStyle(color: Color(0xff77839a), fontSize: 16),
+              //     ),
+              //   ],
+              // ),
+              // SizedBox(
+              //   height: 38,
+              // ),
+              // Expanded(
+              //   child: Padding(
+              //     padding: EdgeInsets.symmetric(horizontal: 8.0),
+              //     child: BarChart(
+              //       BarChartData(
+              //         maxY: 20,
+              //         barTouchData: BarTouchData(
+              //             touchTooltipData: BarTouchTooltipData(
+              //               tooltipBgColor: Colors.grey,
+              //               getTooltipItem: (_a, _b, _c, _d) => null,
+              //             ),
+                          // touchCallback: (response) {
+                          //   if (response.spot == null) {
+                          //     setState(() {
+                          //       touchedGroupIndex = -1;
+                          //       showingBarGroups = List.of(rawBarGroups);
+                          //     });
+                          //     return;
+                          //   }
+                          //
+                          //   touchedGroupIndex =
+                          //       response.spot.touchedBarGroupIndex;
+                          //
+                          //   setState(() {
+                          //     if (response.touchInput is PointerExitEvent ||
+                          //         response.touchInput is PointerUpEvent) {
+                          //       touchedGroupIndex = -1;
+                          //       showingBarGroups = List.of(rawBarGroups);
+                          //     } else {
+                          //       showingBarGroups = List.of(rawBarGroups);
+                          //       if (touchedGroupIndex != -1) {
+                          //         double sum = 0;
+                          //         for (BarChartRodData rod
+                          //             in showingBarGroups[touchedGroupIndex]
+                          //                 .barRods) {
+                          //           sum += rod.y;
+                          //         }
+                          //         final avg = sum /
+                          //             showingBarGroups[touchedGroupIndex]
+                          //                 .barRods
+                          //                 .length;
+                          //
+                          //         showingBarGroups[touchedGroupIndex] =
+                          //             showingBarGroups[touchedGroupIndex]
+                          //                 .copyWith(
+                          //           barRods: showingBarGroups[touchedGroupIndex]
+                          //               .barRods
+                          //               .map((rod) {
+                          //             return rod.copyWith(y: avg);
+                          //           }).toList(),
+                          //         );
+                          //       }
+                          //     }
+                          //   });
+                          // }),
+                      // titlesData: FlTitlesData(
+                      //   show: true,
+                      //   bottomTitles: SideTitles(
+                      //     showTitles: true,
+                      //     getTextStyles: (_) {
+                      //       return TextStyle(
+                      //           color: Color(0xff7589a2),
+                      //           fontWeight: FontWeight.bold,
+                      //           fontSize: 14);
+                      //     },
+                      //     margin: 20,
+                      //     getTitles: (double value) {
+                      //       switch (value.toInt()) {
+                      //         case 0:
+                      //           return 'Mn';
+                      //         case 1:
+                      //           return 'Te';
+                      //         case 2:
+                      //           return 'Wd';
+                      //         case 3:
+                      //           return 'Tu';
+                      //         case 4:
+                      //           return 'Fr';
+                      //         case 5:
+                      //           return 'St';
+                      //         case 6:
+                      //           return 'Sn';
+                      //         default:
+                      //           return '';
+                      //       }
+                      //     },
+                      //   ),
+                      //   leftTitles: SideTitles(
+                      //     showTitles: true,
+                      //     getTextStyles: (_) {
+                      //       return TextStyle(
+                      //           color: Color(0xff7589a2),
+                      //           fontWeight: FontWeight.bold,
+                      //           fontSize: 14);
+                      //     },
+                      //     margin: 32,
+                      //     reservedSize: 14,
+                      //     getTitles: (value) {
+                      //       if (value == 0) {
+                      //         return '1K';
+                      //       } else if (value == 10) {
+                      //         return '5K';
+                      //       } else if (value == 19) {
+                      //         return '10K';
+                      //       } else {
+                      //         return '';
+                      //       }
+                      //     },
+                      //   ),
+                      // ),
+                      // borderData: FlBorderData(
+                      //   show: false,
+                      // ),
+                      // barGroups: showingBarGroups,
+              //       ),
+              //     ),
+              //   ),
+              // ),
+              // SizedBox(
+              //   height: 12,
+              // ),
             ],
           ),
         ),

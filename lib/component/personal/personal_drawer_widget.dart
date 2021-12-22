@@ -76,9 +76,9 @@ class _PersonalDrawerWidgetState extends State<PersonalDrawerWidget> {
                 leading: PersonalConfig.personalToolConfig[toolIndex]['avatar']
                     ['widget'],
                 title: AppTextSubtitle1Widget.defaultStyle(
-                    "${PersonalConfig.personalToolConfig[toolIndex]['title']}"),
+                    data: "${PersonalConfig.personalToolConfig[toolIndex]['title']}",),
                 subtitle: AppTextBodyText2Widget.defaultStyle(
-                    "${PersonalConfig.personalToolConfig[toolIndex]['subtitle']}"),
+                    data: "${PersonalConfig.personalToolConfig[toolIndex]['subtitle']}",),
                 trailing: Icon(Icons.arrow_right),
               )
           ],
@@ -155,8 +155,8 @@ class _PersonalDrawerWidgetState extends State<PersonalDrawerWidget> {
             Airoute.pushNamed(routeName: "/SettingPage");
           },
           leading: Icon(Icons.settings),
-          title: AppTextSubtitle1Widget.defaultStyle("设置"),
-          subtitle: AppTextBodyText2Widget.defaultStyle("去设置"),
+          title: AppTextSubtitle1Widget.defaultStyle(data: "设置",),
+          subtitle: AppTextBodyText2Widget.defaultStyle(data: "去设置"),
           trailing: Icon(Icons.arrow_right),
         ),
       ],

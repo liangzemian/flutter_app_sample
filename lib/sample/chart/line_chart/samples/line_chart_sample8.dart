@@ -84,24 +84,24 @@ class _LineChartSample8State extends State<LineChartSample8> {
         bottomTitles: SideTitles(
           showTitles: true,
           reservedSize: 22,
-          getTextStyles: (_) {
-            return TextStyle(
-              color: Colors.black87,
-              fontSize: 10,
-            );
-          },
+          // getTextStyles: (_) {
+          //   return TextStyle(
+          //     color: Colors.black87,
+          //     fontSize: 10,
+          //   );
+          // },
           interval: 2,
           margin: 8,
         ),
         leftTitles: SideTitles(
           interval: 2,
           showTitles: true,
-          getTextStyles: (_) {
-            return TextStyle(
-              color: Colors.black87,
-              fontSize: 10,
-            );
-          },
+          // getTextStyles: (_) {
+          //   return TextStyle(
+          //     color: Colors.black87,
+          //     fontSize: 10,
+          //   );
+          // },
           reservedSize: 28,
           margin: 12,
         ),

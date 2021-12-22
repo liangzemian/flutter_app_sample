@@ -57,75 +57,75 @@ class _MainAnimState extends State<MainAnimSortPage> {
 
   int _currentStep = 0;
 
-  Widget getStepper() {
-    return Stepper(
-      type: StepperType.vertical,
-      controlsBuilder: (
-        BuildContext context, {
-        VoidCallback onStepContinue,
-        VoidCallback onStepCancel,
-      }) {
-        return Row(
-          children: <Widget>[
-            Expanded(
-              flex: 1,
-              child: Padding(
-                padding: EdgeInsets.all(10),
-                child: RaisedButton.icon(
-                  color: Colors.blue,
-                  textColor: Colors.white,
-                  onPressed: (_currentStep == (_list.length - 1))
-                      ? null
-                      : onStepContinue,
-                  icon: Icon(Icons.arrow_drop_down),
-                  label: Text(
-                      "${(_currentStep == (_list.length - 1)) ? 'Last' : 'Next'}"),
-                ),
-              ),
-            ),
-            Expanded(
-              flex: 1,
-              child: Padding(
-                padding: EdgeInsets.all(10),
-                child: RaisedButton.icon(
-                  onPressed: (_currentStep == 0) ? null : onStepCancel,
-                  icon: Icon(Icons.arrow_drop_up),
-                  label: Text("${(_currentStep == 0) ? 'First' : 'Previous'}"),
-                ),
-              ),
-            ),
-          ],
-        );
-      },
-      currentStep: _currentStep,
-      onStepCancel: () {
-        /*
-        Render
-         */
-
-        setState(() {
-          _currentStep--;
-        });
-      },
-      onStepContinue: () {
-        /*
-        Render
-         */
-        setState(() {
-          _currentStep++;
-        });
-      },
-      onStepTapped: (int index) {
-        /*
-        Render
-         */
-        setState(() {
-          _currentStep = index;
-        });
-      },
-      steps: getSteps(),
-    );
-  }
+  // Widget getStepper() {
+  //   return Stepper(
+  //     type: StepperType.vertical,
+  //     controlsBuilder: (
+  //       BuildContext context, {
+  //       VoidCallback onStepContinue,
+  //       VoidCallback onStepCancel,
+  //     }) {
+  //       return Row(
+  //         children: <Widget>[
+  //           Expanded(
+  //             flex: 1,
+  //             child: Padding(
+  //               padding: EdgeInsets.all(10),
+  //               child: RaisedButton.icon(
+  //                 color: Colors.blue,
+  //                 textColor: Colors.white,
+  //                 onPressed: (_currentStep == (_list.length - 1))
+  //                     ? null
+  //                     : onStepContinue,
+  //                 icon: Icon(Icons.arrow_drop_down),
+  //                 label: Text(
+  //                     "${(_currentStep == (_list.length - 1)) ? 'Last' : 'Next'}"),
+  //               ),
+  //             ),
+  //           ),
+  //           Expanded(
+  //             flex: 1,
+  //             child: Padding(
+  //               padding: EdgeInsets.all(10),
+  //               child: RaisedButton.icon(
+  //                 onPressed: (_currentStep == 0) ? null : onStepCancel,
+  //                 icon: Icon(Icons.arrow_drop_up),
+  //                 label: Text("${(_currentStep == 0) ? 'First' : 'Previous'}"),
+  //               ),
+  //             ),
+  //           ),
+  //         ],
+  //       );
+  //     },
+  //     currentStep: _currentStep,
+  //     onStepCancel: () {
+  //       /*
+  //       Render
+  //        */
+  //
+  //       setState(() {
+  //         _currentStep--;
+  //       });
+  //     },
+  //     onStepContinue: () {
+  //       /*
+  //       Render
+  //        */
+  //       setState(() {
+  //         _currentStep++;
+  //       });
+  //     },
+  //     onStepTapped: (int index) {
+  //       /*
+  //       Render
+  //        */
+  //       setState(() {
+  //         _currentStep = index;
+  //       });
+  //     },
+  //     steps: getSteps(),
+  //   );
+  // }
 
   List<Step> getSteps() {
     List<Step> steps = List<Step>();
@@ -248,7 +248,7 @@ class _MainAnimState extends State<MainAnimSortPage> {
       appBar: AppBar(
         title: Text("$_titleName"),
       ),
-      body: getStepper(),
+      // body: getStepper(),
     );
   }
 }

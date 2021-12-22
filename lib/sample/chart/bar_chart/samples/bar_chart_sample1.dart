@@ -184,26 +184,26 @@ class BarChartSample1State extends State<BarChartSample1> {
               return BarTooltipItem(weekDay + '\n' + (rod.y - 1).toString(),
                   TextStyle(color: Colors.yellow));
             }),
-        touchCallback: (barTouchResponse) {
-          setState(() {
-            if (barTouchResponse.spot != null &&
-                barTouchResponse.touchInput is PointerUpEvent &&
-                barTouchResponse.touchInput is PointerExitEvent) {
-              touchedIndex = barTouchResponse.spot.touchedBarGroupIndex;
-            } else {
-              touchedIndex = -1;
-            }
-          });
-        },
+        // touchCallback: (barTouchResponse) {
+        //   setState(() {
+        //     if (barTouchResponse.spot != null &&
+        //         barTouchResponse.touchInput is PointerUpEvent &&
+        //         barTouchResponse.touchInput is PointerExitEvent) {
+        //       touchedIndex = barTouchResponse.spot.touchedBarGroupIndex;
+        //     } else {
+        //       touchedIndex = -1;
+        //     }
+        //   });
+        // },
       ),
       titlesData: FlTitlesData(
         show: true,
         bottomTitles: SideTitles(
           showTitles: true,
-          getTextStyles: (_) {
-            return TextStyle(
-                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14);
-          },
+          // getTextStyles: (_) {
+          //   return TextStyle(
+          //       color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14);
+          // },
           margin: 16,
           getTitles: (double value) {
             switch (value.toInt()) {
@@ -246,10 +246,10 @@ class BarChartSample1State extends State<BarChartSample1> {
         show: true,
         bottomTitles: SideTitles(
           showTitles: true,
-          getTextStyles: (_) {
-            return TextStyle(
-                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14);
-          },
+          // getTextStyles: (_) {
+          //   return TextStyle(
+          //       color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14);
+          // },
           margin: 16,
           getTitles: (double value) {
             switch (value.toInt()) {

@@ -108,7 +108,7 @@ class _SelectColorFilterPageState extends State<SelectColorFilterPage> {
               ],
             ),
           ),
-          AppTextHeadline6Widget.defaultStyle("滤镜效果预览"),
+          AppTextHeadline6Widget.defaultStyle(data: "滤镜效果预览",),
           GridView.count(
             crossAxisCount: 5,
             shrinkWrap: true,
@@ -136,7 +136,7 @@ class _SelectColorFilterPageState extends State<SelectColorFilterPage> {
                       child: Wrap(
                         children: [
                           AppTextBodyText2Widget.defaultStyle(
-                              "${_colorFilterList[i]['name']}"),
+                              data: "${_colorFilterList[i]['name']}",),
                           Checkbox(
                             value: _colorFilterList[i]['checked'],
                             onChanged: null,

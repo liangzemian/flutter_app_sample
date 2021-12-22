@@ -104,20 +104,20 @@ class _ScatterChartSample2State extends State {
               touchTooltipData: ScatterTouchTooltipData(
                 tooltipBgColor: Colors.black,
               ),
-              touchCallback: (ScatterTouchResponse touchResponse) {
-                if (touchResponse.clickHappened &&
-                    touchResponse.touchedSpot != null) {
-                  final sectionIndex = touchResponse.touchedSpot.spotIndex;
-                  // Tap happened
-                  setState(() {
-                    if (selectedSpots.contains(sectionIndex)) {
-                      selectedSpots.remove(sectionIndex);
-                    } else {
-                      selectedSpots.add(sectionIndex);
-                    }
-                  });
-                }
-              },
+              // touchCallback: (ScatterTouchResponse touchResponse) {
+              //   if (touchResponse.clickHappened &&
+              //       touchResponse.touchedSpot != null) {
+              //     final sectionIndex = touchResponse.touchedSpot.spotIndex;
+              //     // Tap happened
+              //     setState(() {
+              //       if (selectedSpots.contains(sectionIndex)) {
+              //         selectedSpots.remove(sectionIndex);
+              //       } else {
+              //         selectedSpots.add(sectionIndex);
+              //       }
+              //     });
+              //   }
+              // },
             ),
           ),
         ),

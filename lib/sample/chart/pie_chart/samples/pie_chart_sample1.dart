@@ -65,21 +65,21 @@ class PieChartSample1State extends State {
                 aspectRatio: 1,
                 child: PieChart(
                   PieChartData(
-                      pieTouchData:
-                          PieTouchData(touchCallback: (pieTouchResponse) {
-                        setState(() {
-                          final desiredTouch = pieTouchResponse.touchInput
-                                  is! PointerExitEvent &&
-                              pieTouchResponse.touchInput is! PointerUpEvent;
-                          if (desiredTouch &&
-                              pieTouchResponse.touchedSection != null) {
-                            touchedIndex = pieTouchResponse
-                                .touchedSection.touchedSectionIndex;
-                          } else {
-                            touchedIndex = -1;
-                          }
-                        });
-                      }),
+                      // pieTouchData:
+                      //     PieTouchData(touchCallback: (pieTouchResponse) {
+                      //   setState(() {
+                      //     final desiredTouch = pieTouchResponse.touchInput
+                      //             is! PointerExitEvent &&
+                      //         pieTouchResponse.touchInput is! PointerUpEvent;
+                      //     if (desiredTouch &&
+                      //         pieTouchResponse.touchedSection != null) {
+                      //       touchedIndex = pieTouchResponse
+                      //           .touchedSection.touchedSectionIndex;
+                      //     } else {
+                      //       touchedIndex = -1;
+                      //     }
+                      //   });
+                      // }),
                       startDegreeOffset: 180,
                       borderData: FlBorderData(
                         show: false,

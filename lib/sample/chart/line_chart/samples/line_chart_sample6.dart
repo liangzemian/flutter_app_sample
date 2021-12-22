@@ -139,12 +139,12 @@ class LineChartSample6 extends StatelessWidget {
 
                       return intValue.toString();
                     },
-                    getTextStyles: (_) {
-                      return TextStyle(
-                          color: Colors.deepOrange,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18);
-                    },
+                    // getTextStyles: (_) {
+                    //   return TextStyle(
+                    //       color: Colors.deepOrange,
+                    //       fontWeight: FontWeight.bold,
+                    //       fontSize: 18);
+                    // },
                     margin: 16,
                   ),
                   rightTitles: SideTitles(
@@ -160,12 +160,12 @@ class LineChartSample6 extends StatelessWidget {
 
                       return intValue.toString();
                     },
-                    getTextStyles: (_) {
-                      return TextStyle(
-                          color: Colors.blue,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18);
-                    },
+                    // getTextStyles: (_) {
+                    //   return TextStyle(
+                    //       color: Colors.blue,
+                    //       fontWeight: FontWeight.bold,
+                    //       fontSize: 18);
+                    // },
                     margin: 16,
                   ),
                   bottomTitles: SideTitles(showTitles: false),
@@ -173,10 +173,10 @@ class LineChartSample6 extends StatelessWidget {
                     showTitles: true,
                     reservedSize: 28,
                     margin: 8,
-                    getTextStyles: (_) {
-                      return TextStyle(
-                          fontWeight: FontWeight.bold, color: Colors.black);
-                    },
+                    // getTextStyles: (_) {
+                    //   return TextStyle(
+                    //       fontWeight: FontWeight.bold, color: Colors.black);
+                    // },
                     getTitles: (double value) {
                       return value.toInt().toString();
                     },

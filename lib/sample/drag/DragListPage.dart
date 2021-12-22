@@ -333,8 +333,8 @@ class _ListViewSlideState extends State<ListViewSlideWidget> {
         itemBuilder: (context, index) {
           Person person = _personNames[index];
           return Slidable(
-            actionPane: SlidableDrawerActionPane(),
-            actionExtentRatio: 0.25,
+            // actionPane: SlidableDrawerActionPane(),
+            // actionExtentRatio: 0.25,
             child: Card(
               color: Theme.of(context).primaryColor,
               child: Container(
@@ -358,65 +358,65 @@ class _ListViewSlideState extends State<ListViewSlideWidget> {
                 ),
               ),
             ),
-            actions: <Widget>[
-              IconSlideAction(
-                caption: 'Archive',
-                color: Colors.blue,
-                icon: Icons.archive,
-                onTap: () => TipHelper.showTip(
-                    context: context, title: "Archive", message: "Archive"),
-              ),
-              IconSlideAction(
-                caption: 'Share',
-                color: Colors.indigo,
-                icon: Icons.share,
-                onTap: () => TipHelper.showTip(
-                    context: context, title: "Share", message: "Share"),
-              ),
-            ],
-            secondaryActions: <Widget>[
-              IconSlideAction(
-                caption: 'More',
-                color: Colors.black45,
-                icon: Icons.more_horiz,
-                onTap: () => TipHelper.showTip(
-                    context: context, title: "More", message: "More"),
-              ),
-              IconSlideAction(
-                caption: 'Delete',
-                color: Colors.red,
-                icon: Icons.delete,
-                onTap: () {
-                  showCupertinoDialog(
-                      context: context,
-                      builder: (context) {
-                        return CupertinoAlertDialog(
-                          title: Text("删除"),
-                          content: Text("删除后不可恢复！立即删除"),
-                          actions: <Widget>[
-                            CupertinoDialogAction(
-                              child: Text("取消"),
-                              onPressed: () {
-                                Airoute.pop();
-                              },
-                              isDefaultAction: true,
-                            ),
-                            CupertinoDialogAction(
-                              child: Text("确定"),
-                              onPressed: () {
-                                setState(() {
-                                  _personNames.removeAt(index);
-                                });
-                                Airoute.pop();
-                              },
-                              isDefaultAction: false,
-                            ),
-                          ],
-                        );
-                      });
-                },
-              ),
-            ],
+            // actions: <Widget>[
+            //   IconSlideAction(
+            //     caption: 'Archive',
+            //     color: Colors.blue,
+            //     icon: Icons.archive,
+            //     onTap: () => TipHelper.showTip(
+            //         context: context, title: "Archive", message: "Archive"),
+            //   ),
+            //   IconSlideAction(
+            //     caption: 'Share',
+            //     color: Colors.indigo,
+            //     icon: Icons.share,
+            //     onTap: () => TipHelper.showTip(
+            //         context: context, title: "Share", message: "Share"),
+            //   ),
+            // ],
+            // secondaryActions: <Widget>[
+            //   IconSlideAction(
+            //     caption: 'More',
+            //     color: Colors.black45,
+            //     icon: Icons.more_horiz,
+            //     onTap: () => TipHelper.showTip(
+            //         context: context, title: "More", message: "More"),
+            //   ),
+            //   IconSlideAction(
+            //     caption: 'Delete',
+            //     color: Colors.red,
+            //     icon: Icons.delete,
+            //     onTap: () {
+            //       showCupertinoDialog(
+            //           context: context,
+            //           builder: (context) {
+            //             return CupertinoAlertDialog(
+            //               title: Text("删除"),
+            //               content: Text("删除后不可恢复！立即删除"),
+            //               actions: <Widget>[
+            //                 CupertinoDialogAction(
+            //                   child: Text("取消"),
+            //                   onPressed: () {
+            //                     Airoute.pop();
+            //                   },
+            //                   isDefaultAction: true,
+            //                 ),
+            //                 CupertinoDialogAction(
+            //                   child: Text("确定"),
+            //                   onPressed: () {
+            //                     setState(() {
+            //                       _personNames.removeAt(index);
+            //                     });
+            //                     Airoute.pop();
+            //                   },
+            //                   isDefaultAction: false,
+            //                 ),
+            //               ],
+            //             );
+            //           });
+            //     },
+            //   ),
+            // ],
           );
         });
   }

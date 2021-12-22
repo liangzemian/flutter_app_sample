@@ -72,7 +72,7 @@ class _MainListItemWidgetState extends State<MainListItemWidget> {
                         color: Theme.of(context).primaryColorDark,
                       ),
                       AppTextBodyText2Widget.defaultStyle(
-                          "${widget.itemData['author']['nickname']}"),
+                          data: "${widget.itemData['author']['nickname']}",),
                     ],
                   ),
                 ),
